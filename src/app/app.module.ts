@@ -4,17 +4,21 @@ import {Injector, NgModule} from '@angular/core';
 import { AppComponent } from './app.component';
 import { GreeterComponent } from './greeter.component';
 import {createCustomElement} from "@angular/elements";
+import { TestComponent } from './components/test/test.component';
+import {AppRoutingModule} from "./app-routing.module";
 
 @NgModule({
   declarations: [
     AppComponent,
-    GreeterComponent
+    GreeterComponent,
+    TestComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  //bootstrap: [AppComponent]
 })
 export class AppModule {
   constructor(private injector:Injector){
